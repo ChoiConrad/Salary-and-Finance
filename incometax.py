@@ -1,7 +1,7 @@
 def federaltax(salary):
     if salary < 0:
         print("Your salary came in as negative. Please recheck what you input.")
-        return None  # Stops execution after error
+        return None  
     elif 0 <= salary <= 11000:  # Includes salary = 0
         return salary - salary * 0.1
     elif 11001 < salary <= 44725:
@@ -24,7 +24,7 @@ def ficatax(federal):
 def stateincometax(salary):
     if salary < 0:
         print("Your salary came in as negative. Please recheck what you input.")
-        return None  # Stops execution after error
+        return None 
     elif 0 <= salary <= 10756:  # Includes salary = 0
         return salary -  salary * 0.01
     elif 10756 < salary <= 25499:
