@@ -46,4 +46,21 @@ def stateincometax(salary):
     
 def calculateall(salary):
     return stateincometax(ficatax(federaltax(salary)))
+
+
+def takehomepay():
+    salary=input("Welcome to Salary and Finance please enter your salary or hourly wage : ")
+    salary= float(salary)
+    if(salary<9999): 
+        hours= input("How many Hours worked per week? :")
+        hours= float(hours)
+        salary=salary*hours*52.0
+        salary= round(salary,2)
+        takehome= calculateall(salary)
+    else:
+        takehome = calculateall(salary)
+
+    takehome= round(takehome,2)
+    print(f"Your take home pay is {takehome}")
+
     

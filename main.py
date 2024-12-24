@@ -1,15 +1,16 @@
 import incometax
+import billsAndSubscriptions
 
-salary=input("Welcome to Salary and Finance please enter your salary or hourly wage : ")
-salary= float(salary)
-if(salary<9999): 
-    hours= input("How many Hours worked per week? :")
-    hours= float(hours)
-    salary=salary*hours*52.0
-    takehome= incometax.calculateall(salary)
-else:
-    takehome = incometax.calculateall(salary)
-
-takehome= round(takehome,2)
-print(f"Your take home pay is {takehome}")
-
+while True:
+    choice = input(
+        "If you would like to calculate your Take home pay, press 1 \n"
+        "If you would like to calculate your monthly bills, press 2: "
+    )
+    if choice == "1":
+        incometax.takehomepay()
+        break
+    elif choice == "2":
+        billsAndSubscriptions.billCalc()
+        break
+    else:
+        print("Invalid input. Please input 1 or 2.")
