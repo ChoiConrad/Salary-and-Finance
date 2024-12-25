@@ -12,3 +12,8 @@
 - takes in all user subscriptions and bills 
 - calculates it. 
 - outputs. 
+
+
+## Roadmap:
+- Take in CSV files
+- dunno
